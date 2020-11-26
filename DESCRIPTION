@@ -1,0 +1,19 @@
+Package: targetframe
+Title: Creates dataframes from xml files exported from TargetLynx mass spec software
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Erik",
+           family = "Hedman",
+           role = c("aut", "cre"),
+           email = "erik.s.hedman@sll.se",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: The xml files are exported from TargetLynx. TargetLynx is a mass spectrometry software developed by Waters. The output is a list of df:s equal to the number of exported xml files. Each df contains columns: Description, Std (Calibration level), conc (concentration), analyte, rdatum (collection date) and response (analyte area/IS area).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports: 
+    xml2,
+    lubridate,
+    here,
+    stats
