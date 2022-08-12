@@ -6,7 +6,7 @@
 #' @export lm_labels
 #'
 lm_labels <- function (x) {
-  mod <- stats::lm(std ~ conc, data = x)
+  mod <- stats::lm(conc ~ std, data = x)
   formula <- sprintf("italic(y) == %.2f + %.2f* italic(x)",
                      round(stats::coef(mod)[1], 2), round(stats::coef(mod)[2], 2))
 
